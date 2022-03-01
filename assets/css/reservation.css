@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+
+/* main-visual-container */
+
+#main-visual-container {
+	width: 100%;
+	position: relative;
+	margin-bottom: 3rem;
+}
+
+#main-visual-container p {
+	width: 100%;
+}
+
+#main-visual-container p img {
+	min-height: 340px;
+	object-fit: cover;
+}
+
+#main-visual-container h1 {
+	color: var(--white);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+	font-size: 7.5rem;
+}
+
+#main-visual-container h1 span {
+	display: block;
+	font-size: 1.125rem;
+	text-align: center;
+}
+
+/* Main */
+
+main {
+	color: var(--main-dark);
+}
+
+.page-top {
+	text-align: center;
+}
+
+.page-top h2 {
+	font-size: 1.75rem;
+	margin-bottom: 3rem;
+}
+
+.page-top p {
+	line-height: 2.25rem;
+	margin-bottom: 2rem;
+}
+
+.tel_btn {
+	text-align: center;
+}
+
+.tel_btn a {
+	display: inline-block;
+	padding: 15px 5%;
+	font-size: 1.75rem;
+	color: var(--white);
+	background: var(--header-button);
+	border-radius: 10px;
+	transition: all .4s ease-in-out;
+	margin-bottom: 3rem;
+}
+
+.tel_btn a:before {
+	content: url('../images/access/tel_w.svg');
+	position: relative;
+	top: 4px;
+	padding-right: 11px;
+}
+
+.tel_btn a:hover {
+	box-shadow: 1px 1px 8px rgba(0,0,0,.75);
+}
+
+.reservation-form {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.reservation-form table {
+	width: 100%;
+}
+
+.reservation-form table,
+.reservation-form table tr th,
+.reservation-form table tr td {
+	border-style: none;
+}
+
+.reservation-form table tr th,
+.reservation-form table tr td {
+	border-top: 1.5px solid var(--main-dark);
+	padding: 0.3rem 0 0.3rem 1em;
+	text-align: left;
+}
+
+.reservation-form table tr:last-child th,
+.reservation-form table tr:last-child td {
+	border-bottom: 1.5px solid var(--main-dark);
+}
+
+.reservation-form table tr th {
+	width: 30%;
+}
+
+input[type="submit"],
+input[type="text"],
+textarea {
+	box-shadow: none;
+	outline: none;
+	border: none;
+}
+
+input[type="text"],
+textarea {
+	background: #f2f2f2;
+	display: block;
+	width: 70%;
+	padding: 1rem 24% 1rem 1%;
+	border-radius: 4px;
+}
+
+.reservation-form p {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+input[type="submit"] {
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+.page-bottom {
+	text-align: center;
+	line-height: 2.25rem;
+	margin: 2rem 0 7rem 0;
+}
+
+
+/* SP */
+
+@media screen and (max-width: 550px) {
+	
+	#main-visual-container h1 {
+		font-size: 3.75rem;
+	}
+	
+	main {
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	.page-top {
+		margin-top: 4rem;
+	}
+	
+	.page-top h2 {
+		font-size: 1.5625rem;
+		margin-bottom: 2rem;
+	}
+	
+	.page-top p {
+		width: 100%;
+		font-size: 1.0625rem;
+		text-align: left;
+		margin-bottom: 2rem;
+		line-height: 1.6rem;
+	}
+	
+	.tel_btn a {
+		font-size: 1.5625rem;
+	}
+	
+	.reservation-form {
+		width: 100%;
+	}
+	
+	.reservation-form table tr th,
+	.reservation-form table tr td {
+		display: block;
+		width: 100%;
+		border-style: none;
+		padding: 5px 1%;
+	}
+	
+	.reservation-form table tr:last-child th,
+	.reservation-form table tr:last-child td {
+		border-style: none;
+	}
+	
+	input[type="text"],
+	textarea {
+		width: 70%;
+		padding: 1rem 27% 1rem 1%;
+	}
+	
+}

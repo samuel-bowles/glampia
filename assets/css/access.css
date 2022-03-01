@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/* main-visual-container */
+
+#main-visual-container {
+	width: 100%;
+	position: relative;
+	margin-bottom:3rem;
+
+}
+
+#main-visual-container p {
+	width: 100%;
+}
+
+#main-visual-container p img {
+	min-height:340px;
+	object-fit:cover;
+}
+
+#main-visual-container h1 {
+	color: var(--white);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50%);
+	font-size: 7.5rem;
+}
+
+#main-visual-container h1 span {
+	display: block;
+	font-size: 1.125rem;
+	text-align: center;
+}
+
+/* Main */
+
+#addresswrap {
+	text-align:center;
+}
+
+#section-container {
+	margin:0 auto;
+	width: 60%;
+}
+
+#section-container p{
+	line-height:1.7rem;
+	color:#42483F;
+}
+
+h2 { 
+	font-weight:normal;
+	font-size:1.75rem;
+	line-height:3rem;
+	margin-bottom:3rem;
+	color:#42483F;
+}
+
+.title_1,
+.title_2 {
+	overflow-wrap: break-word;
+}
+
+.title_1 {
+	color:#42483F;
+}
+
+.title_1:before {
+  content: url('../images/access/tel.svg');
+  position: relative;
+  top: 4px;
+  padding-right:9px;
+}
+
+.title_2:before {
+  content: url('../images/access/mail.svg');
+  padding-right:2px;
+  position: relative;
+  top: 4px;
+}
+
+.route_navi {
+	padding:20px 0;
+}
+
+.text1,
+.text2 {
+	max-width:490px;
+	text-align:left;
+	margin:0 auto;
+}
+
+.text1 p span {font-size:0.875rem;}
+
+.text2 p span:before {
+	content: "・";
+}
+
+.i-con {
+	width:63px;
+	max-width:490px;
+	margin:0 auto;
+	padding-bottom:15px;
+}
+
+
+.tel_btn{
+	text-align:center;
+	overflow-wrap: anywhere;
+}
+
+
+.tel_btn a{
+	display:inline-block;
+	padding:15px 30px;
+	font-size:1.75rem;
+	color:#fff;
+	background:#C7AA61;
+	border-radius:10px;
+	transition: all .4s ease-in-out;
+	margin-bottom:2rem;
+}
+
+.tel_btn a:before {
+  content: url('../images/access/tel_w.svg');
+  position: relative;
+  top: 4px;
+  padding-right:11px;
+}
+
+.tel_btn a:hover{
+	box-shadow: 1px 1px 8px rgba(0,0,0,.75);
+}
+
+.google_p {
+	text-align:center;
+	margin:1rem 0;
+}
+
+.google_p a{
+	text-align:center;
+	font-size: 1.125rem;
+	color:#42483F;	
+}
+
+.google_p a::after {
+	vertical-align: -4px;
+	content: url(../images/right_arrow.png);
+	padding-left:6px;
+	position: relative;
+  top: 1px;
+}
+
+.google_p a:hover {
+  background: var(--black);
+  color: var(--white);
+  padding: 3px 5px;
+}
+
+.map_sp {
+	display:none;
+}
+
+.GoogleMap{
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    margin-bottom:3rem;
+}
+.GoogleMap iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.route-map {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.by-car,
+.by-train-bus {
+	width: 100%;
+	margin: 0 auto 1rem;
+	border-collapse: separate;
+	border-spacing: 0 10px;
+}
+
+.route-map-title-bar {
+	width: 70%;
+	margin: 0 auto;
+	color: var(--white);
+	background: #33485D;
+	text-align: left;
+	padding-left: 20px;
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+
+.route-map tr {
+	margin: 10px 5px;
+}
+
+.route-map tr td {
+	min-width: 20%;
+	text-align: center;
+	padding: 20px 10px;
+	border-radius: 5px;
+}
+
+.route-map .by-train-bus tr td {
+	min-width: 14.2857%;
+}
+
+.by-car tr td:nth-child(1),
+.by-car tr td:nth-child(3) {
+	background: var(--light-grey);
+}
+
+.grey-td {
+	background: var(--light-grey);
+}
+
+.route-map img {
+	max-width: 100px;
+}
+
+.left-align {
+	text-align: left;
+}
+
+@media screen and (max-width: 550px){
+
+	.route-map{
+		display: flex;
+		width: 100%;
+	}
+
+	.route-map-title-bar {
+		width: 80%;
+		font-size: 1.2rem;
+	}
+
+	.by-car,
+	.by-train-bus {
+		max-width: 80%;
+		writing-mode: vertical-rl;
+		white-space: nowrap;
+		border-spacing: 20px 10px;
+	}
+
+	.route-map tr td {
+		padding: 10px 20px;
+	}
+
+	.rotate-left {
+		text-orientation: upright;
+	}
+
+
+	#main-visual-container h1 {
+		font-size: 3.75rem;
+	}
+		
+	h2 {
+		text-align: center;
+		font-size:1.5rem;
+		line-height:2.5rem;
+	}
+
+	#section-container {
+		margin:0 auto;
+		width: 80%;
+		padding: 20px 0;
+	}
+
+	#section-container p{
+		font-size:0.875rem;
+		line-height:1.7rem;
+		width:100%;
+	}
+
+	.map_pc {
+		display:none;
+	}
+
+	.map_sp {
+		display:block;
+		width:75%;
+		margin:0 auto;
+		padding-bottom:1.5rem;
+	}
+
+}

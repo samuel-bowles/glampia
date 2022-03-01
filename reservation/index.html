@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="GLAMPIAに関するお問い合わせ、ご予約はこちらです。">
+<title>RESERVATION :: GLAMPIA</title>
+<link rel="icon" href="../favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/reservation.css">
+
+<!-- jQuery -->
+<script src="../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../assets/js/jquery.inview.min.js"></script>
+<script src="../assets/js/onScrollColorChange.js"></script>
+<script src="../assets/js/moveInOnScroll.js"></script>
+
+<!-- WebFonts -->
+<link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
+</head>
+<body id="reservation-page">
+<div id="wrapper" class="wrapper">
+	<header>
+		<h1><a href="../index.html"><img src="../assets/images/logo_white.png" alt="グランピアのロゴ。白いテント。"></a></h1>
+		<div>
+			<p class="reservation wf-sawarabimincho"><a href="../reservation/index.html">RESERVATION</a></p>
+			
+			<div id="hmenu" class="wf-josefinsans">
+				<input id="hcheck" type="checkbox" value="hchecked">
+				<label id="hopen" for="hcheck">MENU</label>
+				<label id="hclose" for="hcheck"></label>
+				<nav>
+					<ul>
+						<li><a href="../index.html">TOP</a></li>
+						<li><a href="../room/index.html">ROOM</a></li>
+						<li><a href="../food/index.html">FOOD</a></li>
+						<li><a href="../info/index.html">INFO</a></li>
+						<li><a href="../access/index.html">ACCESS</a></li>
+						<li><a href="../reservation/index.html">RESERVATION</a></li>
+					</ul>
+				</nav>
+			</div><!-- /#hmenu -->	
+		</div>
+	</header>
+	
+	<div id="main-visual-container">
+		<h1 class="wf-allura">Reservation<span>予約</span></h1>
+		<p><img src="../assets/images/reservation/reservation_header.jpg" alt="焚火"></p>
+	</div><!-- /#main-visual-container -->
+	
+	<main class="wf-sawarabimincho">
+		<div class="page-top fade">
+			<h2>予約・問い合わせ</h2>
+			<p>お問い合わせは下記までお願い致します。<br>
+			ご予約の場合は、本文へ宿泊希望日時とご希望のお食事メニュー、お部屋をご記入下さい。<br>
+			お電話でも受け付けております。</p>
+		</div>
+		<p class="tel_btn"><a href="tel:0261−00-0000">0261−00-0000</a></p>
+		
+			<form action="../reservation_completed/index.html" method="post" class="reservation-form">
+				<table border="1">
+					<tr>
+						<th>お名前</th>
+						<td><input type="text" name="name" value="" placeholder="山田太郎"></td>
+					</tr>
+					<tr>
+						<th>ふりがな</th>
+						<td><input type="text" name="furigana" value="" placeholder="やまだたろう"></td>
+					</tr>
+					<tr>
+						<th>メールアドレス</th>
+						<td><input type="text" name="mail" value="" placeholder="sample@sample.jp"></td>
+					</tr>
+					<tr>
+						<th>郵便番号</th>
+						<td><input type="text" name="post_code" value="" placeholder="000-0000"></td>
+					</tr>
+					<tr>
+						<th>住所</th>
+						<td><input type="text" name="address" value="" placeholder=" 県 市..."></td>
+					</tr>
+					<tr>
+						<th>お電話番号</th>
+						<td><input type="text" name="telephone" value="" placeholder="000-0000-0000"></td>
+					</tr>
+					<tr>
+						<th>本文</th>
+						<td><textarea name="content" cols="30" rows="10" value="" placeholder="お問い合わせ内容を記入してください。"></textarea></td>
+					</tr>
+				</table>
+				<p><input type="submit" value="送信"></p>
+			</form>
+		<p class="page-bottom">※回答はお時間をいただく場合がございます。<br>
+		ご予約をお待ちしております。</p>
+	</main>
+	
+	<footer class="wf-josefinsans">
+		<p class="footer-logo"><a href="../index.html"><img src="../assets/images/logo_white.png" alt="大自然を五感で感じる高級グランピングGLAMPIA"></a></p>
+		<div>
+			<ul>
+				<li class="top-page"><a href="../index.html">TOP</a></li>
+				<li class="room-page"><a href="../room/index.html">ROOM</a></li>
+				<li class="food-page"><a href="../food/index.html">FOOD</a></li>
+				<li class="info-page"><a href="../info/index.html">INFO</a></li>
+				<li class="access-page"><a href="../access/index.html">ACCESS</a></li>
+				<li class="reservation-page"><a href="../reservation/index.html">RESERVATION</a></li>
+			</ul>
+			<p><small>Copyright &copy; GLAMPIA HAKUBA All Rights Reserved.</small></p>
+		</div>
+	</footer>
+</div>
+
+</body>
+</html>

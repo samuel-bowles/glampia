@@ -1,0 +1,361 @@
+@charset "utf-8";
+html {
+	overflow-y: scroll;
+}
+
+body {
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Color Values */
+:root {
+	--white: #FFFFFF;
+	--light-yellow: #fdc588;
+	--light-grey: #cccccc;
+	--grey: #333333;
+	--light-bg: #eae4d2;
+	--light-green: #8cc63f;
+	/* Orange:hover --> opacity:0.5 */
+	--orange: #fbb03b;
+	--header-light: #96b5b8;
+	--header-button: #c7aa61;
+	--dark-header: #984a42;
+	--main-dark: #42483f;
+	--black: #000000;
+}
+
+a {
+	text-decoration: none;	
+}
+
+/* Fonts */
+.wf-sawarabimincho {
+	font-family: "Sawarabi Mincho", "游明朝", "YuMincho", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.wf-josefinsans {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.wf-allura {
+	font-family: "Allura", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1920px;
+	background: white;
+	margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+	width: 100%;
+	max-width: 1920px;
+	position: fixed;
+	z-index: 10;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	/* transition: 0.5s linear all; */
+	background: linear-gradient(rgba(0, 0, 0 , 0.6), rgba(0, 0, 0, 0));
+	padding-top: 10px;
+}
+
+.header-hidden {
+	background: rgba(0, 0, 0, 0);
+}
+
+/* Add transparent background to header on scroll (jquery trigger) */
+.fillBg {
+	background: linear-gradient(rgba(0, 0, 0 , 0.6), rgba(0, 0, 0, 0));
+	animation-name: fadeInBg;	
+}
+
+@keyframes fadeInBg {
+	from {
+		background: rgba(0, 0, 0, 0);
+	}
+	to {
+		background: linear-gradient(rgba(0, 0, 0 , 0.6), rgba(0, 0, 0, 0));
+	}
+}
+
+header h1 {
+	position: relative;
+	top: 2px;
+}
+
+#main-visual-container h1 {
+	width: 100%;
+	text-align: center;
+	overflow-wrap: anywhere;
+}
+
+header h1 img {
+	width: 85px;
+	padding: 0 0 0 10px;
+}
+
+header div {
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+}
+
+.reservation {
+	background: var(--black);
+	padding: 9px 0;
+	font-size: 0.75rem;
+	position: relative;
+	top: 0.35rem;
+}
+
+header div p a {
+	color: white;
+	padding: 10px;
+	overflow-wrap: anywhere;
+}
+
+#hmenu {
+	display: inline-block;
+	padding: 0 12px 0 12px;
+}
+
+#hcheck, #hclose {
+	display: none;
+}
+
+#hopen {
+	display: inline-block; 
+	cursor: pointer;
+	padding-top: 2.5rem;
+	position: relative;
+	z-index: 20;
+}
+
+#hopen::before,
+#hopen::after {
+	content: "";
+	display: block;
+	height: 0.2rem;
+	width: 3rem;
+	background: white;
+	position: relative;
+}
+
+#hopen::before {
+	top: -1.15rem;
+}
+
+#hopen::after {
+	top: -1.6rem;
+}
+
+#hclose, nav {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+}
+
+#hclose {
+	z-index: 9;
+	width: 100%;
+	background: black;
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+nav {
+	z-index: 10;
+	width: 100%;
+	transition: 0.5s;
+	transform: translateX(100%);
+	text-align: center;
+	padding-top: 75px;
+}
+
+nav ul {
+	max-height: 60vh;
+	overflow: auto;
+	scrollbar-width: none;
+}
+
+/* Hide scrollbar in Webkit NB not standard or stable */
+nav ul::-webkit-scrollbar {
+	display: none;
+}
+
+nav li a {
+	display: block;
+	font-size: 1.25rem;
+	color: var(--white);
+	padding: 15px 0;
+}
+
+nav li a:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+#hcheck:checked ~ #hclose {
+	display: block;
+}
+
+#hcheck:checked ~ #hopen::before {
+	top: -1.4rem;
+	transform: rotate(45deg);
+}
+
+#hcheck:checked ~ #hopen::after {
+	top: -2.6rem;
+	transform: rotate(-45deg);
+}
+
+#hcheck:checked ~ nav {
+	transform: translateX(0);
+	box-shadow: 4px 0 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Main */
+
+
+
+/* footer */
+footer {
+	clear: both;
+	background: var(--main-dark);
+	align-items: center;
+	padding: 20px;
+}
+
+/*.footer-flex {
+	display: flex;
+	align-items: center;
+}*/
+
+footer {
+	padding-bottom: 100px;
+}
+
+footer > p {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.footer-logo img{
+	width: 85px;
+	margin: 20px 0;
+}
+
+footer div{
+	margin: 0 auto;
+	text-align: center;
+	line-height: 2.5rem;s
+}
+
+footer ul li {
+	display: inline-block;
+	word-spacing: 5px;
+}
+
+footer ul li+li::before {
+	content: " | ";
+	color: var(--light-grey);
+}
+
+footer ul li a {
+	color: var(--light-grey);
+}
+
+footer ul li a:hover {
+	color: var(--white);
+}	
+
+footer ul li a {
+	font-size: 0.875rem;
+	/*vertical-align: middle;*/
+	padding: 3px 0;
+}
+
+footer small {
+	font-size: 0.6rem;
+	color: var(--white);
+}
+
+/* Add fade in on scroll */
+.fade {
+	opacity: 1;	
+	transform: translateY(0);
+}
+
+.fade-hide {
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+.fade-in {
+	opacity: 1;
+	transform: translateY(0);
+	transition: 1s;
+}
+
+/* Auto Highlight Current Page in Footer Menu */
+#top-page footer .top-page a,
+#room-page footer .room-page a,
+#food-page footer .food-page a,
+#info-page footer .info-page a,
+#access-page footer .access-page a,
+#reservation-page footer .reservation-page a {
+	/* background: rgba(255, 255, 255, 0.2); */
+	color: var(--white);
+}
+
+
+/* SP */
+
+@media screen and (max-width: 550px){
+	
+	nav li a {
+		padding: 10px 0;
+	}
+	
+	footer ul li+li::before {
+		display: none;
+	}
+
+	footer {
+		padding-top: 0;
+		padding-bottom: 50px;
+	}
+
+	footer div {
+		text-align: left;
+	}
+
+	footer ul {
+		border-left: 1px solid var(--white);
+	}
+
+	footer ul li {
+		display: block;
+		padding-left: 5%;
+	}
+	
+	footer p {
+		text-align: left;
+		margin: 0 0 0 20px;
+	}
+	
+	.footer-logo {
+		padding: 10px 5%;
+		/*align-self: flex-start;*/
+		text-align: center;
+	}
+}
